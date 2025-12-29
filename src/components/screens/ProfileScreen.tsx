@@ -118,7 +118,7 @@ export function ProfileScreen({ onBack }: ProfileScreenProps) {
               </svg>
             </div>
           </div>
-          <h2 className="text-xl font-bold text-foreground">naveen</h2>
+          <h2 className="text-xl font-bold text-foreground">Sanjeev</h2>
         </div>
 
         {/* Stats Cards */}
