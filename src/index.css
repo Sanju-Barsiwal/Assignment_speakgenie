@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme colors */
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+  --ring: 142 71% 45%;
+
+  /* Brand colors */
+  --primary: 142 71% 45%;
+  --primary-foreground: 0 0% 100%;
+  --green-50: 138 76% 97%;
+  --green-100: 141 84% 93%;
+  --green-200: 141 79% 85%;
+  --green-300: 142 77% 73%;
+  --green-400: 142 69% 58%;
+  --green-500: 142 71% 45%;
+  --green-600: 142 76% 36%;
+  --green-700: 142 72% 29%;
+
+  /* Accent colors */
+  --blue-400: 217 91% 60%;
+  --blue-500: 217 91% 50%;
+  --blue-50: 214 100% 97%;
+  --orange-400: 27 96% 61%;
+  --orange-500: 25 95% 53%;
+  --orange-50: 34 100% 95%;
+  --red-400: 0 84% 60%;
+  --red-500: 0 84% 50%;
+  --red-50: 0 86% 97%;
+  --pink-100: 326 78% 95%;
+  --pink-400: 333 71% 51%;
+  --pink-500: 333 71% 51%;
+  --yellow-100: 55 97% 88%;
+  --yellow-400: 45 93% 47%;
+  --yellow-500: 45 93% 47%;
+  --purple-400: 270 76% 69%;
+  --purple-500: 271 81% 56%;
+  --purple-50: 270 100% 98%;
+
+  /* Stat card backgrounds */
+  --stat-blue: 187 92% 69%;
+  --stat-green: 142 69% 58%;
+  --stat-pink: 350 100% 88%;
+  --stat-yellow: 48 100% 82%;
+}
+
+.dark {
+  /* Dark theme colors */
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 217 33% 17%;
+  --card-foreground: 210 40% 98%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --border: 217 33% 25%;
+  --ring: 142 71% 45%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 2px;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Safe area padding for mobile */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
